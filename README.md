@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-Docker image configured for [amphp](https://amphp.org/) in production use.
+Docker image configured for <a href="https://amphp.org/">amphp</a> in production use.
 </p> 
 
 ## Docker images
