@@ -19,10 +19,10 @@ With xdebug:
 
 * `spacetabio/amphp-alpine:7.4-base-xdebug-1.1.0` – Simple image with PHP and pre-installed extensions. <br>
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/amphp-alpine/7.4-base-1.1.0?style=flat-square)
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-base-1.1.0?style=flat-square)
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-base-xdebug-1.1.0?style=flat-square)
 * `spacetabio/amphp-alpine:7.4-wkhtmltopdf-xdebug-1.1.0` – Image where installed `wkhtmltopdf` and `wkhtmltoimage` to create PDF's and Images from HTML or URI. Non-blocking PHP wrapper available at the [link](https://github.com/spacetab-io/wkhtmltopdf-php).   
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/amphp-alpine/7.4-wkhtmltopdf-1.1.0?style=flat-square)
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-wkhtmltopdf-1.1.0?style=flat-square)
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-wkhtmltopdf-xdebug-1.1.0?style=flat-square)
 
 ## Basic usage
 
