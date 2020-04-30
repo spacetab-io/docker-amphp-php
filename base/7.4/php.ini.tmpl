@@ -1895,6 +1895,19 @@ opcache.file_cache_only=$PHP_OPCACHE_FILE_CACHE_ONLY
 ; optimizations.
 ;opcache.opt_debug_level=0
 
+; Specifies a PHP script that is going to be compiled and executed at server
+; start-up.
+; http://php.net/opcache.preload
+;opcache.preload=
+
+; Prevents caching files that are less than this number of seconds old. It
+; protects from caching of incompletely updated files. In case all file updates
+; on your site are atomic, you may increase performance by setting it to "0".
+;opcache.file_update_protection=2
+
+; Absolute path used to store shared lockfiles (for *nix only).
+;opcache.lockfile_path=/tmp
+
 [curl]
 ; A default value for the CURLOPT_CAINFO option. This is required to be an
 ; absolute path.
@@ -1922,7 +1935,10 @@ opcache.file_cache_only=$PHP_OPCACHE_FILE_CACHE_ONLY
 ; tab-width: 4
 ; End:
 
-
-; ASYNC EXTENSION
-
-async.threads=$PHP_ASYNC_THREADS
+[ffi]
+; FFI API restriction. Possible values:
+; "preload" - enabled in CLI scripts and preloaded files (default)
+; "false"   - always disabled
+; "true"    - always enabled
+ffi.enable=$PHP_FFI_ENABLE
+ffi.preload=$PHP_FFI_PRELOAD

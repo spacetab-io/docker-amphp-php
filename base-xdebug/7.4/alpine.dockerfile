@@ -3,19 +3,16 @@ FROM php:7.4-cli-alpine AS build
 RUN apk add --update --no-cache pcre icu postgresql yaml libuv \
     && apk add --update --no-cache --virtual build-dependencies \
        autoconf g++ libtool pcre make icu-dev postgresql-dev \
-			 postgresql-libs libsasl db yaml-dev git libuv-dev \
+	   postgresql-libs libsasl db yaml-dev libuv-dev \
 	&& docker-php-ext-configure opcache --enable-opcache \
 	&& docker-php-ext-install -j $(nproc) pcntl opcache intl \
-	&& git clone https://github.com/php/pecl-file_formats-yaml.git \
-    && cd pecl-file_formats-yaml && phpize && ./configure && make -j $(nproc) && make install \
+    && pecl install yaml \
     && docker-php-ext-enable yaml \
     && rm -rf ../php-uv \
-	&& git clone https://github.com/bwoebi/php-uv.git \
-    && cd php-uv && phpize && ./configure && make -j $(nproc) && make install \
+    && pecl install channel://pecl.php.net/uv-0.2.4 \
     && docker-php-ext-enable uv \
     && pecl install xdebug \
     && docker-php-ext-enable xdebug \
-    && rm -rf ../php-uv \
 	&& apk del build-dependencies
 
 ENV PHP_MEMORY_LIMIT=-1
@@ -33,6 +30,8 @@ ENV PHP_EXPOSE_PHP=Off
 ENV PHP_DATE_TIMEZONE=UTC
 ENV PHP_SHORT_OPEN_TAG=Off
 
+ENV PHP_FFI_ENABLE=false
+ENV PHP_FFI_PRELOAD=''
 ENV PHP_OPCACHE_ENABLE=1
 ENV PHP_OPCACHE_ENABLE_CLI=1
 ENV PHP_OPCACHE_MEMORY_CONSUMPTION=512

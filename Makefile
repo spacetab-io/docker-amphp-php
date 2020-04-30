@@ -1,4 +1,4 @@
-VERSION = 1.0.0
+VERSION = 1.1.0
 PUSH = false
 
 alpine-base74: NAME = spacetabio/amphp-alpine:7.4-base
@@ -29,4 +29,6 @@ alpine-wkhtmltopdf-xdebug74:
 	    docker push $(NAME)-$(VERSION) ; \
 	fi
 
+base74: alpine-base74 alpine-base-xdebug74
+wk74: alpine-wkhtmltopdf74 alpine-wkhtmltopdf-xdebug74
 all74: alpine-base74 alpine-xdebug74 alpine-wkhtmltopdf74 alpine-wkhtmltopdf-xdebug74

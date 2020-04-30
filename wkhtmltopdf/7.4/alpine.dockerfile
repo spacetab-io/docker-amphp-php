@@ -1,5 +1,5 @@
 FROM surnet/alpine-wkhtmltopdf:3.9-0.12.5-full as wkhtmltopdf
-FROM spacetabio/amphp-alpine:7.4-base-1.0.0
+FROM spacetabio/amphp-alpine:7.4-base-1.1.0
 
 RUN apk add --no-cache \
   libstdc++ \
