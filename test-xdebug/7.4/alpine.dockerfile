@@ -1,6 +1,6 @@
 FROM php:7.4-cli-alpine AS build
 
-RUN apk add --update --no-cache pcre icu postgresql yaml libuv \
+RUN apk add --update --no-cache bash pcre icu postgresql yaml libuv \
     && apk add --update --no-cache --virtual build-dependencies \
        autoconf g++ libtool pcre make icu-dev postgresql-dev \
 	   postgresql-libs libsasl db yaml-dev libuv-dev \

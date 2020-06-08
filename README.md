@@ -26,9 +26,11 @@ With xdebug:
 
 With `composer` (v1) and xdebug (for tests purposes):
 
-* `spacetabio/amphp-alpine:7.4-test-xdebug-1.1.0` – Simple image with PHP and pre-installed extensions. <br>
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/amphp-alpine/7.4-test-xdebug-1.1.0?style=flat-square)
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-test-xdebug-1.1.0?style=flat-square)
+* `spacetabio/amphp-alpine:7.4-test-xdebug-1.2.0` – Simple image with PHP and pre-installed extensions. <br>
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/amphp-alpine/7.4-test-xdebug-1.2.0?style=flat-square)
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-test-xdebug-1.2.0?style=flat-square)
+
+Note: this image using `bash` as default shell. Other images uses `/bin/sh`.
 
 ## Basic usage
 
