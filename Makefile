@@ -8,6 +8,13 @@ alpine-base74:
 	    docker push $(NAME)-$(VERSION) ; \
 	fi
 
+alpine-test-xdebug74: NAME = spacetabio/amphp-alpine:7.4-test-xdebug
+alpine-test-xdebug74:
+	docker build -f "test-xdebug/7.4/alpine.dockerfile" -t $(NAME)-$(VERSION) .
+	@if [ "${PUSH}" == 'true' ]; then \
+	    docker push $(NAME)-$(VERSION) ; \
+	fi
+
 alpine-base-xdebug74: NAME = spacetabio/amphp-alpine:7.4-base-xdebug
 alpine-base-xdebug74:
 	docker build -f "base-xdebug/7.4/alpine.dockerfile" -t $(NAME)-$(VERSION) .
