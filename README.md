@@ -8,21 +8,26 @@ Docker image configured for <a href="https://amphp.org/">amphp</a> in production
 
 ## Docker images
 
-* `spacetabio/amphp-alpine:7.4-base-1.1.0` – Simple image with PHP and pre-installed extensions. <br>
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/amphp-alpine/7.4-base-1.1.0?style=flat-square)
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-base-1.1.0?style=flat-square)
-* `spacetabio/amphp-alpine:7.4-wkhtmltopdf-1.1.0` – Image where installed `wkhtmltopdf` and `wkhtmltoimage` to create PDF's and Images from HTML or URI. Non-blocking PHP wrapper available at the [link](https://github.com/spacetab-io/wkhtmltopdf-php).   
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/amphp-alpine/7.4-wkhtmltopdf-1.1.0?style=flat-square)
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-wkhtmltopdf-1.1.0?style=flat-square)
+### 8.0
+
+* Coming soon.
+
+### 7.4
+* `spacetabio/amphp-alpine:7.4-base-1.1.1` – Simple image with PHP and pre-installed extensions. <br>
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/amphp-alpine/7.4-base-1.1.1?style=flat-square)
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-base-1.1.1?style=flat-square)
+* `spacetabio/amphp-alpine:7.4-wkhtmltopdf-1.1.1` – Image where installed `wkhtmltopdf` and `wkhtmltoimage` to create PDF's and Images from HTML or URI. Non-blocking PHP wrapper available at the [link](https://github.com/spacetab-io/wkhtmltopdf-php).   
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/amphp-alpine/7.4-wkhtmltopdf-1.1.1?style=flat-square)
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-wkhtmltopdf-1.1.1?style=flat-square)
 
 With xdebug:
 
-* `spacetabio/amphp-alpine:7.4-base-xdebug-1.1.0` – Simple image with PHP and pre-installed extensions. <br>
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/amphp-alpine/7.4-base-xdebug-1.1.0?style=flat-square)
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-base-xdebug-1.1.0?style=flat-square)
-* `spacetabio/amphp-alpine:7.4-wkhtmltopdf-xdebug-1.1.0` – Image where installed `wkhtmltopdf` and `wkhtmltoimage` to create PDF's and Images from HTML or URI. Non-blocking PHP wrapper available at the [link](https://github.com/spacetab-io/wkhtmltopdf-php).   
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/amphp-alpine/7.4-wkhtmltopdf-1.1.0?style=flat-square)
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-wkhtmltopdf-xdebug-1.1.0?style=flat-square)
+* `spacetabio/amphp-alpine:7.4-base-xdebug-1.1.1` – Simple image with PHP and pre-installed extensions. <br>
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/amphp-alpine/7.4-base-xdebug-1.1.1?style=flat-square)
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-base-xdebug-1.1.1?style=flat-square)
+* `spacetabio/amphp-alpine:7.4-wkhtmltopdf-xdebug-1.1.1` – Image where installed `wkhtmltopdf` and `wkhtmltoimage` to create PDF's and Images from HTML or URI. Non-blocking PHP wrapper available at the [link](https://github.com/spacetab-io/wkhtmltopdf-php).   
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/amphp-alpine/7.4-wkhtmltopdf-1.1.1?style=flat-square)
+![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/amphp-alpine/7.4-wkhtmltopdf-xdebug-1.1.1?style=flat-square)
 
 With `composer` (v1) and xdebug (for tests purposes):
 
@@ -35,7 +40,7 @@ Note: this image using `bash` as default shell. Other images uses `/bin/sh`.
 ## Basic usage
 
 ```Dockerfile
-FROM spacetabio/amphp-alpine:7.4-base-1.1.0
+FROM spacetabio/amphp-alpine:7.4-base-1.1.1
 
 COPY * /app
 
@@ -66,7 +71,7 @@ As default php-extensions are pre-installed:
 
 The MIT License
 
-Copyright © 2020 spacetab.io, Inc. https://spacetab.io
+Copyright © 2021 spacetab.io, Inc. https://spacetab.io
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
