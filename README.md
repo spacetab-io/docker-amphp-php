@@ -42,7 +42,7 @@ Note: this image using `bash` as default shell. Other images uses `/bin/sh`.
 ```Dockerfile
 FROM spacetabio/amphp-alpine:7.4-base-1.1.1
 
-COPY * /app
+COPY . /app
 
 # cli commands should be created in the responsible service. 
 CMD ["bin/service", "run"]
